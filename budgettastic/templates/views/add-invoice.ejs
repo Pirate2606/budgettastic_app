@@ -1,0 +1,44 @@
+<%- include("../layouts/header.ejs") %>
+
+    <div class="registration-form">
+
+        <form action="/add-invoice" enctype="multipart/form-data" method="POST">
+            <div class="form-icon">
+                <img width="100px" src="/images/small-logo.png" alt="small-logo" />
+            </div>
+
+            <h3 class="pb-4" style="color: #fff; margin: auto; text-align: center; font-size: 34px !important;">Upload
+                New Invoice</h3>
+            <div class="form-group">
+                <label style="color: #fff; font-size: 20px !important;" for="category-selector">Select Invoice
+                    Category</label>
+                <select name="category" class="form-control" id="category-selector">
+                    <option value="food" selected>Food</option>
+                    <option value="green_grocery">Groceries</option>
+                    <option value="hotels">Hotel</option>
+                    <option value="clothes">Clothes</option>
+                    <option value="house">House</option>
+                    <option value="health">Health</option>
+                    <option value="education">Education</option>
+                    <option value="alcohol">Alcohol</option>
+                    <option value="special_occasion">Special Occasion</option>
+                </select>
+            </div>
+            <div class="form-group files">
+                <label style="color: #fff; font-size: 20px !important;">Upload Invoice (png/jpg/jpeg) * </label>
+                <input type="file" class="form-control invoice-image" name="invoice-image" required />
+            </div>
+
+            <% if(shared_data.valid_file_type === false) { %>
+                <h6 class="py-3" style="color: #fff; font-size: 16px;">Allowed file formats: JPG, JPEG and PNG</h6>
+            <% } %>
+
+            <div class="text-center">
+                <button class="upload-invoice-btn" type="submit" value="submit">
+                    Upload
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <%- include("../layouts/footer.ejs") %>

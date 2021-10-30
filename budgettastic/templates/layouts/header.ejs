@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>
+        <%= title %>
+    </title>
+
+    <link rel="icon" href="/images/small-logo.png">
+
+    <!-- Google Fonts -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- Fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/c622614d7c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav style="background-color: #000" class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand ml-md-5 px-md-4 pt-2" href="/">
+                <img width="60px" src="/images/small-logo.png" alt="small-logo" />
+                <img class="ml-md-2" width="230px" src="/images/logo-text.png" alt="website-logo" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse pl-md-5" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li style="font-size: 21px" class="nav-item active pr-md-2 mx-3">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li style="font-size: 21px" class="nav-item active px-md-2 mx-3">
+                        <a class="nav-link" href="/add-invoice">Add Invoice <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li style="font-size: 21px" class="nav-item active px-md-2 mx-3">
+                        <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li style="font-size: 21px" class="nav-item active px-md-2 mx-3">
+                        <a class="nav-link" href="/contact">Contact
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <div>
+
+
+                    <% if (shared_data.user_is_authenticated===true) { %>
+                        <form target="/logout" method="POST" class="form-inline mt-2 mt-md-0 pr-md-5 mr-md-5">
+                            <a style="text-decoration: none; font-size: 20px;" class="pr-5 login" href="/history">
+                                <i class="fas fa-file-invoice-dollar pr-1"></i> Invoices
+                            </a>
+                            <!-- <a style="text-decoration: none; font-size: 20px;" class="pr-5 login" href="/logout">
+                                Logout
+                            </a> -->
+                            <ul class="navbar-nav">
+                                <div class="dropdown">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="dropdown01" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <div style="text-decoration: none; font-size: 20px" class="test">
+                                                <span class="login">
+                                                    Account
+                                                </span>
+
+                                                <i class="fas fa-caret-down login"></i>
+                                            </div>
+                                        </a>
+
+                                        <div style="background-color: #000;" class="dropdown-menu"
+                                            aria-labelledby="dropdown01">
+
+                                            <a style="width: 150px;" class="dropdown-item user-dropdown"
+                                                href="/logout">Log out</a>
+                                        </div>
+                                    </li>
+                                </div>
+                            </ul>
+                        </form>
+                        <% } else { %>
+                            <form class="form-inline mt-2 mt-md-0 pr-md-5 mr-md-5">
+                                <a style="text-decoration: none; font-size: 20px" class="pr-5 login" href="/signin">Log
+                                    in</a>
+                                <a style="text-decoration: none; font-size: 20px" class="pr-5 login" href="/signup">Sign
+                                    up</a>
+                            </form>
+
+                            <% } %>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>

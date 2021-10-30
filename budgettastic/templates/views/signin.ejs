@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>
+        <%= title %>
+    </title>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/c622614d7c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="pb-md-2">
+        <div class="container pt-md-3 p-1 m-1">
+            <div class="row">
+                <div class="col">
+                    <a class="px-md-4 mx-md-3 p-1 m-1" href="/">
+                        <img class="signup-header-img mx-md-5" src="images/small-logo.png" alt="bitly-logo" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr style="width: 88%; margin: 4px auto" />
+
+    <section class="form-section pt-lg-0 pt-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col pt-md-5 pt-1 px-md-5 mx-md-5">
+                    <form method="POST" class="form-signin px-md-5">
+                        <div class="py-4 form-heading" style="text-align: center">
+                            <h3>Log in and start saving money</h3>
+                            <span>Don't have an account?
+                                <a class="top-link" href="/signup"><u>Sign Up</u></a>
+                            </span>
+                        </div>
+
+                        <p style="text-align: center">Log in with:</p>
+
+                        <div class="container pt-4 ml-2">
+                            <div class="row third-party">
+                                <div class="col-sm-6 col-12 py-lg-0 py-2 ml-lg-0 ml-3">
+                                    <a class="btn btn-sm btn-primary btn-block btn-signin" href="/google">
+                                        <i class="fab fa-google"></i> Google
+                                    </a>
+                                </div>
+
+                                <div class="col-sm-6 col-12 pt-lg-0 pt-2 ml-lg-0 ml-3">
+                                    <a class="btn btn-sm btn-primary btn-block btn-signin" href="/github">
+                                        <i class="fab fa-github"></i>
+                                        Github
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <hr class="hr-text pb-lg-0 pb-2" />
+                        </div>
+
+                        <label class="input-label" for="email">Email address</label>
+                        <input style="border-radius: 0.2rem !important;" id="email" type="email" class="form-control"
+                            name="email" required autofocus />
+
+                        <label style="padding-top: 15px" class="input-label" for="password">Password</label>
+                        <input style="border-radius: 0.2rem !important;" id="password" type="password"
+                            class="form-control" name="password" required />
+
+                        <% if(shared_data.valid_user===false) { %>
+                            <h6 style="font-size: 14px;">Invalid Credentials. Try Again.</h6>
+                            <% } %>
+
+                                <button class="btn btn-lg btn-primary btn-block btn-signup-email mt-5" type="submit"
+                                    value="submit">
+                                    Log in
+                                </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

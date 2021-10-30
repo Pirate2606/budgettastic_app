@@ -1,0 +1,143 @@
+<%- include("../layouts/header.ejs") %>
+<section style="background: -webkit-linear-gradient(left, #31ce82, #3df39b)">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="grid invoice">
+                    <div class="grid-body">
+                        <div class="invoice-title">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img
+                                        width="80px"
+                                        src="images/small-logo.png"
+                                        alt="hi"
+                                    />
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>
+                                        Invoice Details and Analysis
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <address>
+                                    <strong>Vendor Details:</strong><br />
+                                    <%= shared_data.invoice_details.vendor_details.address %>
+                                    <br>
+                                    <abbr title="Phone">P:</abbr> <%= shared_data.invoice_details.vendor_details.phone_number %>
+                                </address>
+                            </div>
+                            <div class="col-sm-3">
+                                <address>
+                                    <strong>Expenditure:</strong><br />
+                                    <%= shared_data.invoice_details.currency_code %>
+                                    <%= shared_data.invoice_details.total %> <br />
+                                </address>
+                            </div>
+                        </div>
+                        
+
+                        <div class="container summary">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="pl-3 pl-sm-0">ORDER SUMMARY</h4>
+                                    <table class="table">
+                                        <thead>
+                                            <tr class="line">
+                                                <td><strong>#</strong></td>
+                                                <td class="">
+                                                    <strong>ITEM</strong>
+                                                </td>
+                                                <td class="text-center">
+                                                    <strong>QTY</strong>
+                                                </td>
+                                                <td
+                                                    class="price-head text-center d-none d-md-block"
+                                                >
+                                                    <strong>PRICE (<%= shared_data.invoice_details.currency_code %>)</strong>
+                                                </td>
+                                                <td class="text-right">
+                                                    <strong>SUBTOTAL (<%= shared_data.invoice_details.currency_code %>)</strong>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% var i = 1; %>
+                                            <% Object.values(shared_data.invoice_details.items_bought).forEach(function(item) { %>
+                                                <tr>
+                                                    
+                                                    <td><%= i %></td>
+                                                    <% i++; %>
+                                                    <td>
+                                                        <strong><%= item.name %></strong>
+                                                    </td>
+                                                    <td class="text-center"><%= item.quantity %></td>
+                                                    <td class="text-center d-none d-md-block"><%= item.price %></td>
+                                                    <td class="text-right">
+                                                        <%= item.total %>
+                                                    </td>
+
+                                                    
+                                                </tr>
+                                            <% }) %>
+ 
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-12 ml-md-0 ml-5">
+                                    <h4>Analysis</h4>
+                                    <% if (shared_data.invoice_details.more_than_average) { %>
+                                        <p>Oops! Your expenditure exceeds the average expenditure calculated using a dataset of 40,000+ families, taking into account your monthly income. You have exceeded the average expenses by <%= shared_data.invoice_details.currency_code %> <%= (-1)*Math.round(shared_data.invoice_details.average_expense_diff * 100) / 100 %>.</p>
+                                    <% } else {%>
+                                        <p>Hurray! Your expenditure is below the average expenditure calculated using a dataset of 40,000+ families, taking into account your monthly income. You have spent <%= shared_data.invoice_details.currency_code %> <%= Math.round(shared_data.invoice_details.average_expense_diff * 100) / 100 %> less than the average expenses this month.</p>
+                                    <% } %>
+                                </div>
+                                <div class="col-md-6 col-12 ml-md-0 ml-5">
+                                    <h4>Remarks</h4>
+                                    <% if (shared_data.invoice_details.more_than_average) { %>
+                                        <p>You have exceeded your monthy budget for this category :/ Try to cut on some expenses in some other categories to balance things out ;D.</p>
+                                    <% } else {%>
+                                        <p>Congratulations! You are in control of your expenditure (at least for now :D) Keep going strong and control your expenses for the rest of the month.</p>
+                                    <% } %>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-12 ml-md-0 ml-5">
+                                    <h4>Bank Account Related Remarks</h4>
+                                    <% if (shared_data.bank_balance < 10000 && shared_data.invoice_details.more_than_average) { %>
+                                        <p>WARNING! You are currently spending more than the average expenditure. Also you are running low on your saving. Your current bank balance is ₹<%= shared_data.bank_balance %>. Control your expenses to avoid going into debt.</p>
+                                    <% } else if (shared_data.bank_balance >= 10000 && shared_data.bank_balance < 50000 && shared_data.invoice_details.more_than_average) {%>
+                                        <p>Oops! Your expenditure is above the average expenditure calculated using a dataset of 40,000+ families. However, you have a decent account balance of ₹<%= shared_data.bank_balance %>. Control your further expenses and you can manage the expenses this month.</p>
+                                    <% } else if (shared_data.bank_balance >= 50000 && shared_data.invoice_details.more_than_average) { %>
+                                        <p>Oops! Your expenditure is above the average expenditure calculated using a dataset of 40,000+ families. However, you have a high account balance of ₹<%= shared_data.bank_balance %>. You can manage your expenses from your savings!.</p>
+                                    <% } else { %>
+                                        <p>Hurray! You are doing great in managing your monthly expenditure. Your current account balance is ₹<%= shared_data.bank_balance %>. Your expenses are below the average expenditure of 40,000+ families. Keep it up! :)</p>
+                                    <% } %>
+                                </div>
+                                <!-- <div class="col-md-6 col-12 ml-md-0 ml-5">
+                                    <% if (shared_data.invoice_details.more_than_average) { %>
+                                        <p>You have exceeded your monthy budget for this category :/ Try to cut on some expenses in some other categories to balance things out ;D.</p>
+                                    <% } else {%>
+                                        <p>Congratulations! You are in control of your expenditure (at least for now :D) Keep going strong and control your expenses for the rest of the month.</p>
+                                    <% } %>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include("../layouts/footer.ejs") %>

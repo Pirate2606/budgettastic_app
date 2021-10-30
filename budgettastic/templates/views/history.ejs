@@ -1,0 +1,128 @@
+<%- include("../layouts/header.ejs") %>
+<section id="cart-section" class="pt-5">
+    <div class="px-1 px-lg-0">
+        <div class="pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 p-lg-5 p-0 bg-white rounded shadow-sm mb-5">    <!--CHANGE IN CLASS-->
+                        
+                        <% if(invoices.length === 0) { %>
+                        <h1>No Invoices Uploaded Yet</h1>
+                        <% } else { %>
+                        
+                        <!-- Shopping cart table -->
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th
+                                            scope="col"
+                                            class="border-0 bg-light"
+                                        >
+                                            <div
+                                                class="p-2 px-3 text-uppercase text-center"
+                                            >
+                                                #
+                                            </div>
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            class="border-0 bg-light"
+                                        >
+                                            <div
+                                                class="p-2 px-3 text-uppercase text-center"
+                                            >
+                                                Invoice (click to enlarge)
+                                            </div>
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            class="border-0 bg-light"
+                                        >
+                                            <div class="py-2 text-uppercase text-center">
+                                                Category
+                                            </div>
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            class="border-0 bg-light"
+                                        >
+                                            <div class="py-2 text-uppercase text-center">
+                                                Upload Date
+                                            </div>
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            class="border-0 bg-light"
+                                        >
+                                            <div class="py-2 text-uppercase text-center">
+                                                Expenditure (USD)
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <% for(var i = 0; i < invoices.length; i++) { %>
+
+                                
+                                    <tr>
+                                        <th scope="row" class="border-0">
+                                            <div class="p-2 text-center mt-3">
+                                                <%= i+1 %>
+                                            </div>
+                                        </th>
+                                        <th scope="row" class="border-0">
+                                            <div class="p-2 text-center">
+                                                <img
+                                                    id="largeImage"
+                                                    onclick="swipe();"
+                                                    src="<%= invoices[i].invoice_image %>"
+                                                    alt="food_img"
+                                                    width="70"
+                                                    class="img-fluid rounded shadow-sm"
+                                                />
+                                            </div>
+                                        </th>
+                                        <td class="border-0 align-middle text-center">
+                                            <h5 class="mb-0">
+                                                <span
+                                                    href="#"
+                                                    class="text-dark d-inline-block align-middle"
+                                                    ><%= invoices[i].category.charAt(0).toUpperCase() + invoices[i].category.slice(1)  %></span
+                                                >
+                                            </h5>
+                                        </td>
+                                        <td class="border-0 align-middle text-center">
+                                            <% let dateTime = (invoices[i].createdAt).toString().split("G")[0] %>
+                                            <strong> <%= dateTime %> </strong>
+                                        </td>
+                                        <td class="border-0 align-middle text-center">
+                                            <strong> <%= invoices[i].cost %> </strong>
+                                        </td>
+                                    </tr>
+                                <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    <% } %>
+                        <!-- End -->
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function swipe() {
+   var largeImage = document.getElementById('largeImage');
+   
+   var url=largeImage.getAttribute('src');
+   window.open(url,'Image','width=largeImage.stylewidth,height=largeImage.style.height,resizable=1');
+}
+</script>
+<%- include("../layouts/footer.ejs") %>

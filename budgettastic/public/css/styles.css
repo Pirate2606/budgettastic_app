@@ -1,0 +1,1244 @@
+/* TO FIX THE EMPTY WHITE SPACE ON RIGHT OF PAGE */
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+    background-color: #eeeeee;
+}
+
+input:focus {
+    box-shadow: none !important;
+}
+
+/* REGISTRATION FORM STARTS */
+
+.register {
+    background: -webkit-linear-gradient(left, #31ce82, #3df39b);
+    margin-top: 3%;
+    padding: 3%;
+}
+.register-left {
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+.register-left input {
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right {
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+.register-left img {
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: mover 2s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.register-left p {
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form {
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister {
+    float: right;
+    margin-top: 10%;
+    border: none;
+    outline: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #38da8c;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+
+.btnRegister:hover {
+    background: #2be089;
+}
+
+.btnRegister:focus {
+    background: #2be089;
+    outline: none !important;
+    border: none !important;
+}
+
+.register .nav-tabs {
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.register .nav-tabs .nav-link {
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover {
+    border: none;
+}
+.register .nav-tabs .nav-link.active {
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading {
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}
+
+/*DRAG AND DROP INPUT*/
+
+.files input {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset 0.15s ease-in-out,
+        background-color 0.15s linear;
+    transition: outline-offset 0.15s ease-in-out, background-color 0.15s linear;
+    padding: 80px 0px 105px 25%;
+    text-align: center !important;
+    margin: 0;
+    width: 100% !important;
+}
+.files input:focus {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset 0.15s ease-in-out,
+        background-color 0.15s linear;
+    transition: outline-offset 0.15s ease-in-out, background-color 0.15s linear;
+    border: 1px solid #92b0b3;
+}
+.files {
+    position: relative;
+}
+.files:after {
+    pointer-events: none;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.color input {
+    background-color: #f1f1f1;
+}
+.files:before {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    content: " or drag it here. ";
+    display: block;
+    margin: 0 auto;
+    color: #2ea591;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/*DRAG AND DROP INPUT*/
+
+/* REGISTRATION FORM ENDS */
+
+/* SIGNUP PAGE STARTS */
+
+.form-signin {
+    width: 100%;
+    max-width: 550px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.signup-header-img {
+    width: 75px;
+}
+
+.btn-signup-email {
+    background-color: #38da8c;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 10px auto;
+    border: none;
+}
+
+.btn-signup-email:hover {
+    background-color: #2be089;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+.btn-signup-email:focus {
+    background-color: #2be089 !important;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: none !important;
+}
+
+.btn-signup {
+    background-color: #38da8c;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+    color: #fff;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+}
+
+.btn-signup:hover {
+    background-color: #2be089;
+}
+
+.btn-signup:focus {
+    background-color: #2be089 !important;
+    box-shadow: none !important;
+}
+
+.btn-signup:focus {
+    background-color: #2be089;
+}
+
+.btn-signup img {
+    width: 20px;
+}
+
+.form-section {
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-signin {
+    position: relative;
+    bottom: 50px;
+}
+
+.form-signin h3 {
+    font-weight: 600;
+    line-height: 41px;
+    font-size: 33px;
+    color: #4f565a;
+}
+
+.form-signin span {
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #6c6d71;
+}
+
+.input-label {
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #6c6d71;
+}
+
+.password-check {
+    font-weight: 400;
+    line-height: 21px;
+    font-size: 16px;
+    color: #828387;
+}
+
+.privacy-policy {
+    font-weight: 400;
+    line-height: 21px;
+    font-size: 16px;
+    color: #828387;
+}
+
+.top-link {
+    color: #38da8c;
+}
+
+.top-link:hover {
+    color: #2be089;
+}
+
+/* SIGNUP PAGE ENDS */
+
+/* SIGNIN PAGE STARTS */
+
+.btn-signin {
+    background-color: #38da8c;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.btn-signin:hover {
+    background-color: #2be089;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+.btn-signin:focus {
+    background-color: #2be089 !important;
+    color: #fff;
+    box-shadow: none !important;
+}
+
+.btn-signin img {
+    width: 10px;
+}
+
+.third-party {
+    position: relative;
+    right: 36px;
+    bottom: 30px;
+    width: 120%;
+}
+
+/* SIGNIN PAGE ENDS */
+
+/* HEADER/NAVBAR STARTS */
+
+header {
+    font-size: 18px;
+}
+
+.login {
+    font-weight: 500;
+    color: #38da8c;
+    text-decoration: none;
+}
+
+.login:hover {
+    color: #2fe98f;
+}
+
+.signup {
+    color: #38da8c;
+    text-decoration: none;
+}
+
+.signup:hover {
+    color: #2fe98f;
+}
+
+/* HEADER/NAVBAR ENDS */
+
+/* FOOTER STARTS */
+
+.maytrix-footer {
+    color: #627482 !important;
+    background: #262626;
+}
+
+small {
+    font-size: calc(
+        12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))
+    ) !important;
+}
+
+.bold-text {
+    color: #989c9e !important;
+}
+
+.mt-55 {
+    margin-top: calc(
+        50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))
+    ) !important;
+}
+
+h3 {
+    font-size: calc(
+        34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))
+    ) !important;
+}
+
+.social {
+    font-size: 21px !important;
+}
+
+.rights {
+    font-size: calc(
+        10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))
+    ) !important;
+}
+
+/* FOOTER ENDS */
+
+/* HOME PAGE GALLERY STARTS */
+
+.qualities h2 {
+    font-weight: 800;
+    font-size: 18px;
+    color: #1d1f21;
+    line-height: 22px;
+}
+
+.qualities h3 {
+    font-weight: 800;
+    /* font-size: 18px; */
+    color: #1d1f21;
+    line-height: 40px;
+}
+
+.qualities p {
+    font-weight: 400;
+    font-size: 15px;
+    color: #1d1f21;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.quality-img {
+    width: 400px;
+}
+
+.scroll-for-more {
+    color: #1d1f21;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.promotion h2 {
+    color: #1d1f21 !important;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+}
+
+.promotion h4 {
+    color: #1d1f21 !important;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.headers {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 32px;
+    color: #1d1f21 !important;
+}
+
+.bitly101desc p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #1d1f21;
+}
+
+.bitly101-img {
+    width: 350px;
+    border-radius: 5%;
+}
+
+.home-gif {
+    filter: drop-shadow(0 0 0.75rem #1d1f21);
+    width: 300px;
+}
+
+.bitly101-btn {
+    background-color: #38da8c;
+    color: #fff !important;
+    font-size: 17px;
+    width: 170px;
+    border-radius: 8px;
+    border: none;
+    line-height: 35px;
+    font-weight: 600;
+}
+
+.bitly101-btn:hover {
+    background-color: #2fe98f;
+}
+
+.bitly101-btn:focus {
+    background-color: #2fe98f;
+    box-shadow: none;
+}
+
+.custom-btn {
+    font-size: 19px;
+    line-height: 44px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #38da8c;
+    border-radius: 8px;
+    width: 160px;
+    height: 60px;
+}
+
+.btn-custom {
+    font-size: 19px;
+    line-height: 44px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #38da8c;
+    border-radius: 8px;
+    width: 160px;
+    height: 60px;
+}
+
+.btn-custom:hover {
+    background-color: #2be089;
+}
+/* HOME PAGE GALLERY ENDS */
+
+/*------------------------------------------------------------------
+    Menu
+-------------------------------------------------------------------*/
+
+.menu-btn:focus {
+    outline: none;
+}
+
+.heading-title {
+    margin-bottom: 50px;
+}
+.heading-title h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 38px;
+}
+.heading-title p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 22px;
+}
+
+.filter-button-group {
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    margin: 10px 15px;
+    display: inline-block;
+}
+
+.filter-button-group a {
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    background: #fff;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 4px;
+}
+
+.filter-button-group a.active {
+    background: #ff7171;
+    color: #fff;
+    box-shadow: 2px 20px 45px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.418));
+}
+
+.order-btn {
+    background-color: #ff7171;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+}
+
+.order-btn:hover {
+    background-color: #ff5a5a;
+    color: #fff;
+}
+
+.order-btn:focus {
+    background-color: #ff5a5a;
+    color: #fff;
+}
+
+.opening-hours {
+    color: #989c9e;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+/*------------------------------------------------------------------
+    Customer Reviews
+-------------------------------------------------------------------*/
+
+.customer-reviews-box {
+    padding: 70px 0px;
+}
+
+.carousel-inner .carousel-item .img-box {
+    width: 135px;
+    height: 135px;
+}
+.carousel-control-prev {
+    left: -100px;
+}
+.carousel-control-next {
+    right: -100px;
+}
+/* .carousel-indicators{
+	top: 320px;
+} */
+
+@media (max-width: 992px) {
+    .carousel-indicators {
+        visibility: hidden;
+    }
+}
+
+.text-warning {
+    color: #fff !important;
+    font-size: 24px;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+    .carousel-inner .carousel-item p {
+        font-size: 14px;
+    }
+    .carousel-control-prev {
+        left: -20px;
+    }
+    .carousel-control-next {
+        right: -20px;
+    }
+    .carousel-indicators {
+        top: 400px;
+    }
+}
+
+#reviews .carousel-control-prev {
+    background: #38da8c;
+    color: #fff;
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 50px;
+    top: 50%;
+    font-size: 28px;
+    opacity: 1;
+}
+
+#reviews .carousel-control-next {
+    background: #38da8c;
+    color: #fff;
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 50px;
+    top: 50%;
+    font-size: 28px;
+    opacity: 1;
+}
+
+/*------------------------------------------------------------------
+    Contact info
+-------------------------------------------------------------------*/
+
+.contact-imfo-box {
+    background-color: #fefefe;
+    padding: 30px 0;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.contact-imfo-box i {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #1d1919;
+    color: #2fe98f;
+    font-size: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.contact-imfo-box h4 {
+    margin: 0px;
+    margin-top: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.contact-imfo-box p {
+    margin: 0px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+#cart-section {
+    background: -webkit-linear-gradient(left, #31ce82, #3df39b);
+}
+
+@media (max-width: 767px) {
+    .remove-product {
+        visibility: hidden;
+    }
+}
+
+/* PAYMENTS PAGE STARTS */
+
+#payment-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    #payment-footer {
+        position: static;
+        width: 100%;
+    }
+}
+
+.checkout-btn {
+    background: #38da8c;
+    border: none;
+    color: #fff;
+}
+
+.checkout-btn:focus {
+    background: #2be089;
+    outline: none;
+    color: #fff;
+}
+
+.checkout-btn:hover {
+    background: #2be089;
+    color: #fff;
+}
+
+/* PAYMENTS PAGE ENDS */
+
+/* CONTACT US PAGE STARTS */
+
+.contact-form {
+    background: #fff;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+
+@media (max-width: 992px) {
+    .contact-form {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        width: 90%;
+    }
+}
+
+.contact-form .form-control {
+    border-radius: 1rem;
+}
+.contact-image {
+    text-align: center;
+}
+.contact-image img {
+    /* border-radius: 6rem; */
+    width: 120px;
+    margin-top: -3%;
+    /* transform: rotate(29deg); */
+}
+.contact-form form {
+    padding: 11%;
+}
+.contact-form form .row {
+    margin-bottom: -7%;
+}
+.contact-form h3 {
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #252628;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #38da8c;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnContact:hover {
+    background: #2be089;
+}
+
+@media (max-width: 992px) {
+    .btnContact {
+        width: 100% !important;
+    }
+}
+
+.btnContactSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+
+/* CONTACT US PAGE ENDS */
+
+/* ORDER SUMMARY STARTS */
+
+.invoice {
+    padding: 30px;
+}
+
+.invoice h2 {
+    margin-top: 0px;
+    line-height: 0.8em;
+}
+
+.invoice .small {
+    font-weight: 300;
+}
+
+.invoice hr {
+    margin-top: 10px;
+    border-color: #ddd;
+}
+
+.invoice .table tr.line {
+    border-bottom: 1px solid #ccc;
+}
+
+.invoice .table td {
+    border: none;
+}
+
+.invoice .identity {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.invoice .identity strong {
+    font-weight: 600;
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    color: #666666;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    .summary {
+        margin-left: -43px;
+    }
+}
+
+/* ORDER SUMMARY ENDS */
+
+/* PREVIEW PAGE STARTS */
+
+#preview-page {
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+
+.font-robo {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.row-space {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.col-2 {
+    width: -webkit-calc((100% - 60px) / 2);
+    width: -moz-calc((100% - 60px) / 2);
+    width: calc((100% - 60px) / 2);
+}
+
+.profile-edit-btn:hover {
+    border: none;
+    background-color: #e4e2e2d2;
+}
+
+@media (max-width: 767px) {
+    .col-2 {
+        width: 100%;
+    }
+}
+
+.emp-profile {
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.profile-img {
+    text-align: center;
+}
+.profile-img img {
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5 {
+    color: #333;
+}
+.profile-head h6 {
+    color: #0062cc;
+}
+.profile-edit-btn {
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating {
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span {
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs {
+    margin-bottom: 5%;
+}
+.profile-head .nav-tabs .nav-link {
+    font-weight: 600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 2px solid #0062cc;
+}
+.profile-work {
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p {
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a {
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul {
+    list-style: none;
+}
+.profile-tab label {
+    font-weight: 600;
+}
+.profile-tab p {
+    font-weight: 600;
+    color: #0062cc;
+}
+
+@media (max-width: 992px) {
+    .profile-edit-btn {
+        width: 100%;
+    }
+}
+
+/* PREVIEW PAGE ENDS */
+
+.user-dropdown {
+    color: #38da8c;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #1f1e1e
+}
+
+.user-dropdown:hover {
+    color: #2be089;
+    background-color: #000 !important;
+}
+
+.user-dropdown:focus {
+    color: #2be089;
+    background-color: #000 !important;
+}
+
+/* ADD INVOICE FORM */
+
+.registration-form {
+    padding: 50px 0;
+}
+
+.registration-form form {
+    background-color: #000;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 70px;
+    border-radius: 30px;
+    /* border-top-right-radius: 30px; */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .form-icon {
+    text-align: center;
+    background-color: #fff;
+    font-size: 40px;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 20px;
+    /* line-height: 100px; */
+}
+
+.registration-form .item {
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.registration-form .create-account {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #38da8c;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.registration-form .create-account:hover {
+    background-color: #2fe98f;
+}
+
+.registration-form .create-account:focus {
+    background-color: #2fe98f;
+}
+
+.registration-form .social-media {
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    padding: 35px 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #9fadca;
+    border-top: 1px solid #dee9ff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .social-icons {
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.registration-form .social-icons a {
+    font-size: 23px;
+    margin: 0 3px;
+    color: #5691ff;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 45px;
+}
+
+.registration-form .social-icons a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.upload-invoice-btn {
+    border: none;
+    outline: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #38da8c;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+
+.upload-invoice-btn:hover {
+    background: #2be089;
+}
+
+.upload-invoice-btn:focus {
+    background: #2be089;
+    outline: none !important;
+    border: none !important;
+}
+
+#largeImage:hover {
+    cursor: pointer;
+}
+
+.list-unstyled a {
+    text-decoration: none !important;
+    color: #F8F9FA;
+}
+
+@media (max-width: 576px) {
+    .registration-form form {
+        padding: 50px 20px;
+        margin: 10px;
+    }
+
+    .registration-form .form-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
+
+    .files input {
+        padding: 80px 0px 105px 18%;
+    }
+}
+
+@media (min-width: 576px) {
+    .profile-picture {
+        padding-left: 120px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-picture {
+        padding-left: 45px !important;
+    }
+}

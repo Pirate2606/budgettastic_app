@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <title><%= title %></title>
+
+        <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+            rel="stylesheet"
+            id="bootstrap-css"
+        />
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Google Fonts -->
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1581152092/smartwizard/smart_wizard.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1581152091/smartwizard/smart_wizard_theme_arrows.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+        />
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <!-- Fontawesome CDN -->
+        <script
+            src="https://kit.fontawesome.com/c622614d7c.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            type="text/javascript"
+            src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1581152197/smartwizard/jquery.smartWizard.min.js"
+        ></script>
+    </head>
+
+    <body>
+        <div class="container register mt-3 my-5">
+            <div class="row">
+                <div class="col-md-3 register-left pt-lg-5 mt-lg-5">
+                    <i class="fas fa-4x fa-hamburger"></i>
+                    <h3>Welcome</h3>
+                    <p style="font-weight: 400">
+                        Your Budget Buddy powered by ML and Data Analysis
+                    </p>
+                </div>
+                <div class="col-md-9 register-right">
+                    <div class="tab-content" id="myTabContent">
+                        <div
+                            class="tab-pane fade show active"
+                            id="home"
+                            role="tabpanel"
+                            aria-labelledby="home-tab"
+                        >
+                            <h3 class="register-heading">
+                                Please fill in the following details
+                            </h3>
+
+                            <form method="POST" action="/register">
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="First Name *"
+                                                name="fname"
+                                                value=""
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Last Name *"
+                                                name="lname"
+                                                value=""
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Monthly Income *"
+                                                name="monthly_income"
+                                                value=""
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <input
+                                                type="number"
+                                                class="form-control"
+                                                placeholder="Total Family Members *"
+                                                name="family_members"
+                                                value=""
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input
+                                                disabled
+                                                class="form-control"
+                                                value="<%= email %>"
+                                             
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                minlength="10"
+                                                maxlength="10"
+                                                name="phone"
+                                                class="form-control"
+                                                placeholder="Mobile No. *"
+                                                value=""
+                                                required
+                                            />
+                                        </div>
+
+                                        <button
+                                            class="btnRegister"
+                                            type="submit"
+                                            value="submit"
+                                        >
+                                            Register
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div
+                            class="tab-pane fade show"
+                            id="profile"
+                            role="tabpanel"
+                            aria-labelledby="profile-tab"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"
+        ></script>
+
+    </body>
+</html>
