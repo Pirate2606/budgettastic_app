@@ -1,38 +1,24 @@
 # BUDGETTASTIC – YOUR ML POWERED BUDGET MANAGER
 
-# Instructions:
+## Introduction:
+Managing your monthly expenditure can be difficult at times. Therefore, through my project, I aim at helping people in managing their expenses. I have used a Machine Learning and Data Analysis Algorithms that study a huge dataset of over 40,000+ families’ category-wise monthly expenditure, categorized by their monthly incomes/budgets. The user uploads an image of the invoice along with the category of the bill. Algorith read the details of the invoice using OCR and then the API analyses the expenses and provides the user with a comprehensive feedback, which will help them manage their expenditure for the month. One of my objectives of building this website was to gain some knowledge about the fintech space and add up on my current skill set. I have tried my best to build this website as well as I could. The website is fully responsive with the help of Bootstrap 4. JavaScript and Python power the backend of the website and I have used MongoDB for the database needs. After the campaign, I would love to further develop the project and make it better.
 
-## Prerequisites:
-    1. NodeJS should be installed on the system.
-    2. An active internet connection.
+## Budgettastic API:
+I have created an API that takes the URL of the image of the invoice, income of the person, category of the invoice and the category expense of the month. Then, it perform OCR on the invoice to extract details from the invoice. After reading the invoice data, the total expenditure of the person is processed considering a data set of 40,000+ families. After doing all these operations, the API returns the response to the Node application. The response contains details like total bill amount, item details, item prices and quantities, and comprehensive analysis like whether the expenditure exceeds the average expenditure of a family within that income range.
 
-## To run the project locally, follow these steps:
-    1. Clone the repository: git clone https://github.com/Pirate2606/Budgettastic
-    2. Change the directory: cd Budgettastic
-    3. Initialize npm in the project directory: npm init -y
-    4. Install the node modules: npm i
-    5. Generate OAuth Client ID and Secret for Google and Github.
-    6. Place the Client IDs and Secrets in a .env file in the root of the project.
-    7. Change the base URL of google.js and github.js OAuth files to https://budgettastic.herokuapp.com/{google/github}/callback
-    8. Run the server using: npm run dev
-    9. Open this link in browser: http://127.0.0.1:3000/
-
-
-# Budgettastic API
-
-## Endpoints
+### Endpoints
 
     https://budgettastic-api.herokuapp.com/analysis?url=<IMAGE_URL>&cat=<CATEGORY>&inc=<INCOME>&exp=<CURRENT_EXPENSES>
     Example URL: https://budgettastic-api.herokuapp.com/analysis?url=https://i.ibb.co/CQ0th2r/test1.jpg&cat=food&inc=20000&exp=450
 
-### Parameters to be passed in the URL:
+#### Parameters to be passed in the URL:
 
     IMAGE_URL: Downloadable image URL. eg: https://i.ibb.co/CQ0th2r/test1.jpg
     CATEGORY can be any one of these: ['food', 'green_grocery', 'hotels', 'alcohol', 'clothes', 'house', 'health', 'education', 'special_occasion']
     INCOME >= 10000
     EXPENSES: Total expenses of the family for a particular category.
 
-## Output
+### Output
 
     {
       "subtotal": 4500.0,
@@ -75,15 +61,25 @@
       "average_expense_diff": 12017.771300448432
     }
 
-## Run the project locally:
+# Instructions:
 
-### Prerequisites:
+## Prerequisites:
+    1. NodeJS should be installed on the system.
+    2. Python3 should be installed on the system.
+    3. An active internet connection.
 
-    1. Python3 should be installed on the system.
-    2. Need an active internet connection.
+## To run the project locally, follow these steps:
+    1. Clone the repository: git clone https://github.com/Pirate2606/budgettastic_app
+    2. Change the directory: cd budgettastic_app/budgettastic
+    3. Initialize npm in the project directory: npm init -y
+    4. Install the node modules: npm i
+    5. Generate OAuth Client ID and Secret for Google and Github.
+    6. Place the Client IDs and Secrets in a .env file in the root of the project.
+    7. Change the base URL of google.js and github.js OAuth files to https://budgettastic.herokuapp.com/{google/github}/callback
+    8. Run the server using: npm run dev
+    9. Open this link in browser: http://127.0.0.1:3000/
 
-### Steps:
-
+### For setting up API:
     1. Setup a virtual environment:
         For ubuntu:
             1. sudo apt install virtualenv
@@ -94,8 +90,8 @@
             2.	python -m venv <path for creating virtualenv>
             3.	To activate: <virtualenv path>\Scripts\activate
 
-    2. Clone the repository: git clone https://github.com/Pirate2606/budgettastic_api
-    3. Change the directory: cd budgettastic_api
+    2. Clone the repository: git clone https://github.com/Pirate2606/budgettastic_app
+    3. Change the directory: cd budgettastic_app/api
     4. Install the requirements: pip install -r requirements.txt
     5. Generate API key by visiting Veryfi (https://www.veryfi.com/receipt-ocr-api/)
     6. Add the keys to environment.
